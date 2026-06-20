@@ -1,19 +1,33 @@
 .about {
   padding: 7rem 2rem;
-  background: #ffffff;
+  background: #fafafa;
   position: relative;
   overflow: hidden;
 }
 
+/* Aurora-style blobs matching hero */
 .about::before {
   content: '';
   position: absolute;
-  top: -100px;
-  right: -100px;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(59,130,246,0.06) 0%, transparent 70%);
+  top: -120px;
+  right: -120px;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(59,130,246,0.13) 0%, transparent 65%);
   pointer-events: none;
+  filter: blur(30px);
+}
+
+.about::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(16,185,129,0.1) 0%, transparent 65%);
+  pointer-events: none;
+  filter: blur(30px);
 }
 
 .about-inner {
@@ -23,6 +37,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .about-section-label {
@@ -74,18 +90,19 @@
   font-family: 'DM Sans', sans-serif;
   font-size: 0.8rem;
   font-weight: 500;
-  padding: 6px 14px;
+  padding: 6px 16px;
   border-radius: 999px;
-  background: color-mix(in srgb, var(--skill-color) 10%, white);
+  background: #ffffff;
   color: var(--skill-color);
-  border: 1.5px solid color-mix(in srgb, var(--skill-color) 25%, white);
+  border: 1.5px solid color-mix(in srgb, var(--skill-color) 25%, transparent);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: default;
 }
 
 .about-skill-pill:hover {
   transform: translateY(-2px) scale(1.04);
-  box-shadow: 0 4px 12px color-mix(in srgb, var(--skill-color) 25%, transparent);
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--skill-color) 20%, transparent);
 }
 
 /* Right side decorative */
@@ -156,15 +173,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #ffffff;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: 24px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08), 0 0 0 1px rgba(255,255,255,0.8);
   padding: 2rem 2.5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   min-width: 200px;
-  border: 1px solid rgba(0,0,0,0.06);
+  border: 1px solid rgba(255,255,255,0.6);
   z-index: 2;
 }
 
