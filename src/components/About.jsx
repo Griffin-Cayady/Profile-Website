@@ -36,9 +36,6 @@ export default function About() {
       <div className="about-inner">
         <div className="about-left">
           <div className="about-section-label">About Me</div>
-          <h2 className="about-heading" ref={headingRef}>
-            Turning complexity<br />into <span className="about-heading--accent">clarity</span>
-          </h2>
           <div className="about-text" ref={textRef}>
             <p>
               I'm Griffin Cayady, a System Analyst who specializes in understanding how organizations work and designing the systems that help them work better. I bridge the gap between people, processes, and technology.
