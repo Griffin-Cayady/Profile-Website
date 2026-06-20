@@ -66,9 +66,6 @@ export default function Projects() {
       <div className="projects-inner">
         <div className="projects-header" ref={headingRef}>
           <div className="projects-section-label">Selected Work</div>
-          <h2 className="projects-heading">
-            Projects that<br /><span className="projects-heading--outline">made an impact</span>
-          </h2>
         </div>
 
         <div className="projects-grid">

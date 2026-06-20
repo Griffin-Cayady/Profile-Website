@@ -40,9 +40,6 @@ export default function Contact() {
       <div className="contact-inner">
         <div className="contact-header" ref={headingRef}>
           <div className="contact-section-label">Let's Connect</div>
-          <h2 className="contact-heading">
-            Got a project?<br /><span className="contact-heading--accent">Let's talk.</span>
-          </h2>
           <p className="contact-subtext">
             Whether you need a system analyst, have a complex process to untangle, or just want to say hello — my inbox is always open.
           </p>
