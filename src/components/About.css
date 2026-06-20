@@ -52,12 +52,12 @@
 }
 
 .about-heading {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
-  font-weight: 800;
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 300;
   color: #111;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
   margin: 0 0 1.8rem;
 }
 

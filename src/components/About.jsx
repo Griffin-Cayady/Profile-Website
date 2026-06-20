@@ -6,24 +6,10 @@ import './About.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const skills = [
-  { label: 'Requirements Analysis', color: '#3b82f6' },
-  { label: 'System Design', color: '#10b981' },
-  { label: 'Process Modeling', color: '#f59e0b' },
-  { label: 'Data Flow Diagrams', color: '#8b5cf6' },
-  { label: 'SQL & Databases', color: '#3b82f6' },
-  { label: 'Stakeholder Communication', color: '#10b981' },
-  { label: 'UML Diagrams', color: '#f59e0b' },
-  { label: 'Agile / Scrum', color: '#8b5cf6' },
-  { label: 'Business Analysis', color: '#3b82f6' },
-  { label: 'Documentation', color: '#10b981' },
-];
-
 export default function About() {
   const sectionRef = useRef(null);
   const headingRef = useRef(null);
   const textRef = useRef(null);
-  const skillsRef = useRef(null);
   const decorRef = useRef(null);
 
   useEffect(() => {
@@ -40,15 +26,6 @@ export default function About() {
         scrollTrigger: { trigger: decorRef.current, start: 'top 80%' },
         autoAlpha: 0, scale: 0.7, duration: 1, ease: 'back.out(1.4)', delay: 0.1
       });
-
-      const pills = skillsRef.current?.querySelectorAll('.about-skill-pill');
-      if (pills) {
-        gsap.from(pills, {
-          scrollTrigger: { trigger: skillsRef.current, start: 'top 85%' },
-          autoAlpha: 0, y: 20, scale: 0.85, duration: 0.5,
-          stagger: 0.07, ease: 'back.out(1.4)', delay: 0.2
-        });
-      }
     }, sectionRef);
 
     return () => ctx.revert();
@@ -71,17 +48,6 @@ export default function About() {
             </p>
           </div>
 
-          <div className="about-skills" ref={skillsRef}>
-            {skills.map((skill, i) => (
-              <span
-                key={i}
-                className="about-skill-pill"
-                style={{ '--skill-color': skill.color }}
-              >
-                {skill.label}
-              </span>
-            ))}
-          </div>
         </div>
 
         <div className="about-right">
