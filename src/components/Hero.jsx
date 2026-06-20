@@ -45,6 +45,8 @@ export default function Hero() {
               italic={true}
               textColor="#111111"
               minFontSize={48}
+              fontFamily="Roboto Flex"
+              fontUrl=""
             />
           </div>
         </div>

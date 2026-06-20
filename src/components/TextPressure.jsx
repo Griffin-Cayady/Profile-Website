@@ -121,11 +121,11 @@ const TextPressure = ({
 
   const styleElement = useMemo(() => (
     <style>{`
-      @font-face {
+      ${fontUrl ? `@font-face {
         font-family: '${fontFamily}';
         src: url('${fontUrl}');
         font-style: normal;
-      }
+      }` : ''}
       .tp-flex { display: flex; justify-content: space-between; }
       .tp-stroke span { position: relative; color: ${textColor}; }
       .tp-stroke span::after {
